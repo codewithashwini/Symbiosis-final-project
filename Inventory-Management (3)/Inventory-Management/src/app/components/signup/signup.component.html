@@ -1,0 +1,40 @@
+<div class="signup-container">
+    <div class="signup-box">
+      <h2>Sign Up</h2>
+      <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)" novalidate>
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" [(ngModel)]="user.name" class="form-control" required />
+        </div>
+  
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control" required />
+        </div>
+  
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" required />
+        </div>
+  
+        <!-- Confirm Password Field -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword" class="form-control" required />
+        </div>
+  
+        <!-- Signup Button -->
+        <!-- <button (click)="onSubmit()">Sign Up</button> -->
+         <button type="submit">submit</button>
+  
+        <!-- Login Link -->
+        <p class="login-text">
+          Already have an account? <a routerLink="/login">Log in here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  

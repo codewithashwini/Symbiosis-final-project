@@ -1,0 +1,42 @@
+<div class="order-create">
+    <h2>Create New Order</h2>
+  
+    <form (ngSubmit)="onSubmit(orderForm)" #orderForm="ngForm">
+      <div class="form-group">
+        <label for="product">Product</label>
+        <select id="product" [(ngModel)]="order.product" name="product" class="form-control" required>
+          <option *ngFor="let product of products" [value]="product.id">{{ product.name }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input id="quantity" [(ngModel)]="order.quantity" name="quantity" type="number" class="form-control" required min="1">
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" [(ngModel)]="order.status" name="status" class="form-control" required>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="orderdate">Order Date</label>
+        <input id="orderdate" [(ngModel)]="order.orderdate" name="orderdate" type="date" class="form-control" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!orderForm.form.valid">Create Order</button>
+    </form>
+  
+    <!-- Success and Error Messages -->
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  </div>
+  

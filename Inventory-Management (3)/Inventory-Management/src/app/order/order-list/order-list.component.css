@@ -1,0 +1,130 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  color: #333;
+}
+
+/* Error State */
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #d9534f;
+  border-radius: 5px;
+}
+
+/* Order List Styles */
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #4a90e2;
+}
+
+.order-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-table th, .order-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.order-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action buttons styling */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+}
+
+.dashboard-btn {
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #357ab7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .order-table {
+      width: 100%;
+  }
+
+  .order-table th, .order-table td {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  button {
+      font-size: 12px;
+  }
+
+  .dashboard-btn {
+      width: 150px;
+  }
+}
